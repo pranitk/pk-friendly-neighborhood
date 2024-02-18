@@ -26,10 +26,12 @@ This mobile app will help connect parents and patients with other helpful member
 * Connect
   * Connect them with other parents in same situation
   * Connect them with credible resources and organizations that offer help in the specific area they are looking for
+
 Note: Create all projects in a folder under https://github.com/fsi-hack4autism/friendly-neighborhood/tree/main/mobile
 ### Copilot creation
 * Focus is on providing a chat based discovery experience 
   * Use copilot to allow parents and patients ask open ended questions and have a conversation
   * Prompt the right next actions for the parents 
   * Provide helpful information from credible sources
+
 Note: Create all projects in a folder under https://github.com/fsi-hack4autism/friendly-neighborhood/tree/main/copilot
