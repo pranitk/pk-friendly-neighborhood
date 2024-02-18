@@ -1,4 +1,4 @@
-# friendly-neighborhood
+# Friendly Neighborhood Mobile App
 This repository is hosted as a part of FSI Hackathon for Autism (https://github.com/fsi-hack4autism)
 
 ## Objective: Connect parents of children with ASD with helpful resources in the community - other parents, BCBAs, organizations, etc.
