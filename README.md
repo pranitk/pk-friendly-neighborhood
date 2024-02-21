@@ -17,6 +17,9 @@ This mobile app will help connect parents and patients with other helpful member
   * Connect them with other parents in same situation
   * Connect them with credible resources and organizations that offer help in the specific area they are looking for
 
+### Architecture
+![Fiendly Neighborhood Architecture](friendly-neighborhood-arch.PNG)
+
 ## Code repository setup
 ### Mobile App
 * Focus is on creating a mobile app with a pleasent and easy to use user experience
