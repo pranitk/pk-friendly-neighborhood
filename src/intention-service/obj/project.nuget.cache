@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kepsozXykAlZrsOlQ2UO0+I7A+E9DvnPqfkxzBdsN4nU4d0FgsNFTaFUkMS9qY/NhBLmsa5hKEi775MMJW7nsg==",
+  "dgSpecHash": "ESQL9g1euT7IE4eUYobmYuir7wp7p2MhCSrUU1pw0S/MLfUaHHh9GxPePAXlW8+JTj69hOusl/OvRpsXfFy64w==",
   "success": true,
-  "projectFilePath": "C:\\projects\\friendly-neighborhood\\src\\profile-service\\profile-service.csproj",
+  "projectFilePath": "C:\\projects\\friendly-neighborhood\\src\\intention-service\\intention-service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mrichter\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.3\\microsoft.aspnetcore.openapi.8.0.3.nupkg.sha512",
     "C:\\Users\\mrichter\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
