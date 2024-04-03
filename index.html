@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnosis Check</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 80%; /* Adjust width for chatbot space */
+            max-width: 600px; /* Maximum width */
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .yes-button, .connect-button {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .no-button, .resources-button {
+            background-color: #f44336;
+            color: white;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+        #chat-box {
+            text-align: left;
+            height: 300px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 20px 0;
+        }
+        .chat-message {
+            margin: 10px 0;
+            padding: 5px;
+            border-radius: 10px;
+        }
+        .user-message {
+            background-color: #dcf8c6;
+            text-align: right;
+        }
+        .bot-message {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+<div id="content" class="container">
+    <p>Do you have a diagnosis?</p>
+    <button class="yes-button" onclick="responseYes()">Yes</button>
+    <button class="no-button" onclick="responseNo()">No</button>
+</div>
+
+<script>
+    function responseYes() {
+        document.getElementById('content').innerHTML = `
+            <p>What would you like to do?</p>
+            <button class="connect-button" onclick="connect()">Connect</button>
+            <button class="resources-button" onclick="findResources()">Find Resources</button>
+        `;
+    }
+
+    function responseNo() {
+        document.getElementById('content').innerHTML = `
+            <div id="chat-box">
+                <div class="chat-message bot-message">Hi, I'm the Autism Assistant Bot. How can I deploy my services to assist you?</div>
+            </div>
+            <input type="text" id="user-input" placeholder="Type your message here..." onkeypress="if(event.keyCode == 13) {sendMessage();}">
+            <button onclick="sendMessage()">Send</button>
+        `;
+        document.getElementById('user-input').focus(); // Focus on the input field
+    }
+
+    function connect() {
+        // Implement connect functionality or redirect
+        alert("Connect option selected");
+    }
+
+    function findResources() {
+        // Implement find resources functionality or redirect
+        alert("Find Resources option selected");
+    }
+
+    function sendMessage() {
+        var inputElement = document.getElementById('user-input');
+        var message = inputElement.value.trim();
+        if (message) {
+            var chatBox = document.getElementById('chat-box');
+            chatBox.innerHTML += `<div class="chat-message user-message">${message}</div>`;
+            inputElement.value = ''; // Clear input
+
+            // Placeholder for bot response logic
+            chatBox.innerHTML += `<div class="chat-message bot-message">Thanks for sharing. How can I further assist you?</div>`;
+            chatBox.scrollTop = chatBox.scrollHeight; // Scroll to the bottom
+        }
+    }
+</script>
+
+</body>
+</html>
+
