@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Autism Resources Chatbot</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        // Function to handle user input and retrieve resources
+        function searchResources() {
+            var userLocation = document.getElementById("location").value;
+            var apiKey = "AIzaSyDttoppLRB7DITEWfoqm1vzphTvYy-mE2Q";
+            var apiUrl = "https://www.googleapis.com/customsearch/v1?key=" + apiKey + "&cx=d7b987669bda24906&q=autism+" + userLocation;
+
+            // Make an AJAX request to the Google WebSearch API
+            $.ajax({
+                url: apiUrl,
+                dataType: "json",
+                success: function(response) {
+                    // Process the response and display the resources
+                    var resources = response.items;
+                    var output = "";
+                    for (var i = 0; i < resources.length; i++) {
+                        output += "<li><a href='" + resources[i].link + "'>" + resources[i].title + "</a></li>";
+                    }
+                    document.getElementById("resources").innerHTML = output;
+                },
+                error: function() {
+                    document.getElementById("resources").innerHTML = "Error retrieving resources.";
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>Autism Resources Chatbot</h1>
+    <p>Enter your location:</p>
+    <input type="text" id="location" placeholder="Enter your location">
+    <button onclick="searchResources()">Search</button>
+    <h2>Resources:</h2>
+    <ul id="resources"></ul>
+</body>
+</html>
