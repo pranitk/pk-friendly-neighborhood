@@ -60,7 +60,7 @@
 
   main {
     width: 100%;
-    min-height: 100%;
+    /* min-height: 100%; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,6 +76,7 @@
   .content {
     display: flex;
     justify-content: space-around;
+    flex-direction: column;
     width: 100%;
     max-width: 700px;
     margin-bottom: 3rem;
@@ -178,22 +179,47 @@
   }
 </style>
 
+<div class="app-header-row">
+  <mat-icon>person</mat-icon>
+  <span
+    class="app-header-text">
+    Autism Connect
+</span>
+</div>
+
+
 <main class="main">
-  <div class="content">
-    <div class="left-side">      
-      <p>Welcome to Autism Connect</p>
-      <h1>How can I help?</h1>
-      <div>
-        <input 
-          class="user-input"
-          matInput placeholder="I am looking for ..." 
-          value="">
-          <button mat-icon-button>
-            <mat-icon>send</mat-icon>
-          </button>
-      </div>      
-    </div>
-    <div class="divider" role="separator" aria-label="Divider"></div>
+  <div class="content">   
+      <div class="chat-panel">
+        @for (item of responses; track item.content; let i = $index) {
+            <div class="chat-row">
+                <p [ngClass]="{ 'user': item.sender === 'user',
+                'service': item.sender === 'service',
+                'current-question': item.sender === 'service' && (i === responses.length-1)  }">
+                {{item.content}}    
+            </p>
+            </div>
+        }
+      </div>
+
+      <!-- intro layout -->
+      <div *ngIf="responses.length === 0">
+        <p>{{helpTip}}</p>
+        <h1>{{question}}</h1>
+      </div>
+        
+
+    <div class="user-input-panel">
+      <input 
+        class="user-input"
+        matInput 
+        [placeholder]="inputPlaceholder" 
+        [(ngModel)]="userInput">
+        <button mat-icon-button (click)="sendResponse()">
+          <mat-icon>send</mat-icon>
+        </button>
+    </div>  
+    <!-- <div class="divider" role="separator" aria-label="Divider"></div>
     <div class="right-side">
       <div class="pill-group">
         @for (item of [
@@ -209,11 +235,8 @@
             <span>{{ item.title }}</span>
           </a>
         }
-        <!-- <div class="pill">
-          <input type="text" class="pill-input" placeholder="Enter text here">
-        </div> -->
       </div>
-    </div>
+    </div> -->
   </div>
 </main>
 

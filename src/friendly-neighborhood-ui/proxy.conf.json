@@ -1,0 +1,7 @@
+{
+    "/intention/": {
+      "target": "https://usecase4intentiondocker.azurewebsites.net",
+      "secure": false,
+      "changeOrigin": true
+    }
+  }

@@ -1,0 +1,11 @@
+
+<div class="chat-panel">
+    @for (item of responses) {
+        <div class="chat-row">
+            <p [ngClass]="{ 'user': item.sender === 'user',
+            'server': item.sender === 'service'  }">
+            {{item.content}}    
+        </p>
+        </div>
+    }
+</div>
