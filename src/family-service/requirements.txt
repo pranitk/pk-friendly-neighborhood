@@ -1,0 +1,8 @@
+flask
+flask_cors
+langchain-community
+langchain-core
+azure-core
+openai
+numpy
+texteditor==1.4.1
