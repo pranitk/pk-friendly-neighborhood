@@ -1,0 +1,15 @@
+1. Austism Diagnosis summary
+2. zip code OR city, state       
+3. age       
+4. gender (note, if they have used he, his it means they are male. if they use she, her it means they are female. if they use they/their they are non-binary. if they use these in conversation, you can infer the answer and skip this question.)
+5. siblings  
+6. family profile (examples: married, divorced, single-parent)  
+7. connection level (examples: one-time advice, play date, on-going, etc.)     
+8. language preferences      
+9. Contact information      
+10. Priority (examples: similar family proile, lives nearby, similar diagnosis) 
+
+
+My child is 5 years old, they have been diagnosed with Aspergers. We live in Huntington.
+
+He has 2 sisters, and we are a married couple. We are looking for a family with a similar diagnosis, and we would like to connect on an on-going basis. We would prefer to speak with someone who speaks English.

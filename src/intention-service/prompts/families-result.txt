@@ -1,0 +1,13 @@
+Here are the details that a parent/care-giver of a child with autism has provided
+
+### ANSWERS:
+<<user_message>>
+###
+ 
+The parent is looking to find a similar family to share experiences and support. 
+
+Here is are some families that match what they are looking for.
+
+<<family_list>>
+
+Return a list of families that match the criteria and preferences from the parent.
