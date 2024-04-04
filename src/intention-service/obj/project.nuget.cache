@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "F4EiR/JL9H3pYG3LZ3wJH5tfaVc7mVFOnvY58CTbVYIVZiw4WN5RCy+pLYZoTPun1DYu85EtKioqs0HJN0MZxA==",
+  "dgSpecHash": "jVSk0i0pNinJ7rnRRfOmQ7uiRWEk4vewEzH8rgEawjhcVGPOVhzbgbKPN87q6EeYD+LqP2NlkJxeVp5Oy63Rpw==",
   "success": true,
-  "projectFilePath": "C:\\projects\\friendly-neighborhood\\src\\intention-service\\intention-service.csproj",
+  "projectFilePath": "c:\\projects\\friendly-neighborhood\\src\\intention-service\\intention-service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mrichter\\.nuget\\packages\\azure.ai.openai\\1.0.0-beta.15\\azure.ai.openai.1.0.0-beta.15.nupkg.sha512",
     "C:\\Users\\mrichter\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",

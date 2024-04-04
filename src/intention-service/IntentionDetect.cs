@@ -3,12 +3,12 @@ using Azure.AI.OpenAI;
 
 public class IntentDetect
 {
-    public static IntentionResponse RouteByIntention(IntentionRequest intentionRequest)
+    public static async Task<IntentionResponse> RouteByIntentionAsync(IntentionRequest intentionRequest)
     {
         switch (intentionRequest.Appstate)
         {
-            case "iniital":
-                return DetectIntention(intentionRequest);
+            case "initial":
+                return await DetectIntentionAsync(intentionRequest);
 
             /*case "families":
                 Console.WriteLine("Goodbye! Have a great day!");
@@ -24,17 +24,17 @@ public class IntentDetect
         }
     }
 
-    public static IntentionResponse DetectIntention(IntentionRequest intentionRequest)
+    public async static Task<IntentionResponse> DetectIntentionAsync(IntentionRequest intentionRequest)
     {
         //get detention intent prompt and merge it with the user message and submit to Azure OpenAI and get the response
         //load prompt from text file
-        string prompt = File.ReadAllText("intention-prompt.txt");
+        string prompt = File.ReadAllText("prompts/intention-prompt.txt");
         prompt = prompt.Replace("<<user_message>>", intentionRequest.Message);
-        var response = CallAzureOpenAI(prompt).Result;
-        var chatResponse = string.Empty;
+        var response = await CallAzureOpenAIAsync(prompt);
+        string? chatResponse;
         if (CheckIfIntention(response))
         {
-            chatResponse = "I detected the intention of the user as " + response + ". What can I do for you?";
+            chatResponse = "I detected the intention of the user as " + response + ". Tell me more.";
         }
         else
         {
@@ -58,7 +58,7 @@ public class IntentDetect
         }
     }
 
-    public static async Task<string> CallAzureOpenAI(string prompt)
+    public static async Task<string> CallAzureOpenAIAsync(string prompt)
     {
         Uri azureOpenAIResourceUri = new("https://usecase4openai.openai.azure.com/");
         AzureKeyCredential azureOpenAIApiKey = new("5d7e790180a94d4bb728bb2f56c8b813");

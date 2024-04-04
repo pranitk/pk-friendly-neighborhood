@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\projects\\friendly-neighborhood\\src\\intention-service\\intention-service.csproj": {}
+    "c:\\projects\\friendly-neighborhood\\src\\intention-service\\intention-service.csproj": {}
   },
   "projects": {
-    "C:\\projects\\friendly-neighborhood\\src\\intention-service\\intention-service.csproj": {
+    "c:\\projects\\friendly-neighborhood\\src\\intention-service\\intention-service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\projects\\friendly-neighborhood\\src\\intention-service\\intention-service.csproj",
+        "projectUniqueName": "c:\\projects\\friendly-neighborhood\\src\\intention-service\\intention-service.csproj",
         "projectName": "intention-service",
-        "projectPath": "C:\\projects\\friendly-neighborhood\\src\\intention-service\\intention-service.csproj",
+        "projectPath": "c:\\projects\\friendly-neighborhood\\src\\intention-service\\intention-service.csproj",
         "packagesPath": "C:\\Users\\mrichter\\.nuget\\packages\\",
-        "outputPath": "C:\\projects\\friendly-neighborhood\\src\\intention-service\\obj\\",
+        "outputPath": "c:\\projects\\friendly-neighborhood\\src\\intention-service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mrichter\\AppData\\Roaming\\NuGet\\NuGet.Config",

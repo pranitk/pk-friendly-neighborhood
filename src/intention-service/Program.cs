@@ -16,35 +16,16 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-var summaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
-
-app.MapGet("/weatherforecast", () =>
-{
-    var forecast = Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
-})
-.WithName("GetWeatherForecast")
-.WithOpenApi();
-
-
 app.MapPost("/intention", async context =>
 {
     var intentionRequest = await context.Request.ReadFromJsonAsync<IntentionRequest>();
 
     // Call the Azure OpenAI service to detect the user's intention
-    var response = await IntentDetect.CallAzureOpenAI(intentionRequest.Message);
+    var response = await IntentDetect.RouteByIntentionAsync(intentionRequest);
     await context.Response.WriteAsJsonAsync(response);
-});
+})
+.WithName("PostIntention")
+.WithOpenApi();
 
 app.Run();
 
