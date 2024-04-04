@@ -1,0 +1,11 @@
+You are trying to understand the intention of a user trying to get information about autism. 
+Either they do not have a diagnosis and want one or they do have a diagnosis and are either looking to connect with other families or get more support services.  
+
+Here is the user's request:
+###
+<<user_message>>
+###
+
+Based on the user's request, please respond with ONLY 1 of these 3 values: diagnosis, family, service.
+
+If you can't tell what the user's request is, or in any other case, please only return "unknown".

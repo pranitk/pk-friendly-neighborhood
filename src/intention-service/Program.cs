@@ -23,7 +23,7 @@ var summaries = new[]
 
 app.MapGet("/weatherforecast", () =>
 {
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
+    var forecast = Enumerable.Range(1, 5).Select(index =>
         new WeatherForecast
         (
             DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
@@ -35,6 +35,16 @@ app.MapGet("/weatherforecast", () =>
 })
 .WithName("GetWeatherForecast")
 .WithOpenApi();
+
+
+app.MapPost("/intention", async context =>
+{
+    var intentionRequest = await context.Request.ReadFromJsonAsync<IntentionRequest>();
+
+    // Call the Azure OpenAI service to detect the user's intention
+    var response = await IntentDetect.CallAzureOpenAI(intentionRequest.Message);
+    await context.Response.WriteAsJsonAsync(response);
+});
 
 app.Run();
 

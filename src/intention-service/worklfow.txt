@@ -1,0 +1,4 @@
+Initial State
+Diagnosis State
+Resources State
+Families State
