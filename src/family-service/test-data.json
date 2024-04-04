@@ -1,0 +1,65 @@
+{
+    "data": [
+      {
+        "PatientID": "ae01f16d-bbd2-4c92-bf65-8ac19a533d15",
+        "Relationship": "Parent",
+        "ZipCode": "12345",
+        "Age": 5,
+        "Gender": "Male",
+        "Diagnosis": "Autism Spectrum Disorder",
+        "LanguagePreference": "English",
+        "Summary": "My son shows repetitive behaviors and has difficulties with social interaction.",
+        "ContactPhoneNumber": "123-456-7890",
+        "Email": "parent1@example.com"
+      },
+      {
+        "PatientID": "3c90e157-32db-48c3-a2c9-729b9265dd5b",
+        "Relationship": "Guardian",
+        "ZipCode": "67890",
+        "Age": 7,
+        "Gender": "Female",
+        "Diagnosis": "Asperger Syndrome",
+        "LanguagePreference": "Spanish",
+        "Summary": "My daughter struggles with communication and has a strong interest in specific topics.",
+        "ContactPhoneNumber": "234-567-8901",
+        "Email": "guardian1@example.com"
+      },
+      {
+        "PatientID": "b8edf4d4-501b-4d80-b0de-521f3052a89a",
+        "Relationship": "Sibling",
+        "ZipCode": "23456",
+        "Age": 10,
+        "Gender": "Male",
+        "Diagnosis": "Autism Spectrum Disorder",
+        "LanguagePreference": "English",
+        "Summary": "My brother has difficulty with social interaction and often engages in repetitive behaviors.",
+        "ContactPhoneNumber": "345-678-9012",
+        "Email": "sibling1@example.com"
+      },
+      {
+        "PatientID": "56c63bcb-6c2c-4f60-a8f6-449bbcc1763f",
+        "Relationship": "Caregiver",
+        "ZipCode": "34567",
+        "Age": 35,
+        "Gender": "Female",
+        "Diagnosis": "None",
+        "LanguagePreference": "French",
+        "Summary": "I take care of my niece who has been diagnosed with autism.",
+        "ContactPhoneNumber": "456-789-0123",
+        "Email": "caregiver1@example.com"
+      },
+      {
+        "PatientID": "7d0d95cc-1a85-43e5-9b44-996d7679b0ac",
+        "Relationship": "Parent",
+        "ZipCode": "45678",
+        "Age": 8,
+        "Gender": "Male",
+        "Diagnosis": "Autism Spectrum Disorder",
+        "LanguagePreference": "English",
+        "Summary": "My son has difficulties with communication and social interaction.",
+        "ContactPhoneNumber": "567-890-1234",
+        "Email": "parent2@example.com"
+      }
+    ]
+  }
+  
