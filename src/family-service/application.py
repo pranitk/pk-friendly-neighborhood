@@ -35,14 +35,20 @@ def get_test_data():
     formatted_records = [{'PatientID': str(patient_id), 'Summary': summary} for patient_id, summary in records]
     return jsonify(formatted_records), 200
 
+
 @app.route('/insert-generate-and-index', methods=['POST'])
 def insert_generate_and_index():
     data_from_database = read_records_from_database()
+    print("Data from Database")
+    print(data_from_database)
     records_with_embeddings = []
     for record in data_from_database:
+        print(record)
         text = record.Summary  
 
         embedding = generate_embedding_and_metadata(text)
+        # Convert embedding to string representation
+        embedding_str = ','.join(map(str, embedding))
         record_with_embedding = {
             'PatientID': record.PatientID,
             'Relationship': record.Relationship,
@@ -54,7 +60,7 @@ def insert_generate_and_index():
             'Summary': text,
             'ContactPhoneNumber': record.ContactPhoneNumber,
             'Email': record.Email,
-            'embedding': embedding
+            'embedding': embedding_str
         }
         records_with_embeddings.append(record_with_embedding)
 

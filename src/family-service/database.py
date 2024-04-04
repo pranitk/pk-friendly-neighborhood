@@ -65,7 +65,7 @@ def read_records_from_database():
 
     try:
         cursor = conn.cursor()
-        cursor.execute("SELECT PatientID, Summary FROM TestData")
+        cursor.execute("SELECT * FROM TestData")
         records = cursor.fetchall()
         return records
     except Exception as e:
