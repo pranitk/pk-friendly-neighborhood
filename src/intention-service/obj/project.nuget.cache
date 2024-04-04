@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jVSk0i0pNinJ7rnRRfOmQ7uiRWEk4vewEzH8rgEawjhcVGPOVhzbgbKPN87q6EeYD+LqP2NlkJxeVp5Oy63Rpw==",
+  "dgSpecHash": "EH9TwS4q5klfcqDJ8FXyHWutIHMEzWwEK8iM7/FB77uez4XP+/FxurosWo5BghZFiZnTLEJmgWxZ2wBl4+Vr+g==",
   "success": true,
-  "projectFilePath": "c:\\projects\\friendly-neighborhood\\src\\intention-service\\intention-service.csproj",
+  "projectFilePath": "C:\\projects\\friendly-neighborhood\\src\\intention-service\\intention-service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mrichter\\.nuget\\packages\\azure.ai.openai\\1.0.0-beta.15\\azure.ai.openai.1.0.0-beta.15.nupkg.sha512",
     "C:\\Users\\mrichter\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
@@ -24,6 +24,7 @@
     "C:\\Users\\mrichter\\.nuget\\packages\\microsoft.identitymodel.abstractions\\6.22.0\\microsoft.identitymodel.abstractions.6.22.0.nupkg.sha512",
     "C:\\Users\\mrichter\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
     "C:\\Users\\mrichter\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
+    "C:\\Users\\mrichter\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.6\\microsoft.visualstudio.azure.containers.tools.targets.1.19.6.nupkg.sha512",
     "C:\\Users\\mrichter\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\mrichter\\.nuget\\packages\\openai\\1.11.0\\openai.1.11.0.nupkg.sha512",
     "C:\\Users\\mrichter\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",

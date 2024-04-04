@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\projects\\friendly-neighborhood\\src\\intention-service\\intention-service.csproj": {}
+    "C:\\projects\\friendly-neighborhood\\src\\intention-service\\intention-service.csproj": {}
   },
   "projects": {
-    "c:\\projects\\friendly-neighborhood\\src\\intention-service\\intention-service.csproj": {
+    "C:\\projects\\friendly-neighborhood\\src\\intention-service\\intention-service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\projects\\friendly-neighborhood\\src\\intention-service\\intention-service.csproj",
+        "projectUniqueName": "C:\\projects\\friendly-neighborhood\\src\\intention-service\\intention-service.csproj",
         "projectName": "intention-service",
-        "projectPath": "c:\\projects\\friendly-neighborhood\\src\\intention-service\\intention-service.csproj",
+        "projectPath": "C:\\projects\\friendly-neighborhood\\src\\intention-service\\intention-service.csproj",
         "packagesPath": "C:\\Users\\mrichter\\.nuget\\packages\\",
-        "outputPath": "c:\\projects\\friendly-neighborhood\\src\\intention-service\\obj\\",
+        "outputPath": "C:\\projects\\friendly-neighborhood\\src\\intention-service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mrichter\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -56,6 +56,10 @@
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[8.0.3, )"
+            },
+            "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
+              "target": "Package",
+              "version": "[1.19.6, )"
             },
             "OpenAI": {
               "target": "Package",
