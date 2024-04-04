@@ -6,3 +6,5 @@ azure-core
 openai
 numpy
 texteditor==1.4.1
+pyodbc
+azure-search-documents
