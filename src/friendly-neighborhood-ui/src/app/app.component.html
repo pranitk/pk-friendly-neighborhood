@@ -215,7 +215,9 @@
         matInput 
         [placeholder]="inputPlaceholder" 
         [(ngModel)]="userInput">
-        <button mat-icon-button (click)="sendResponse()">
+        <button mat-icon-button 
+        [disabled]="isLoadingResponse"
+        (click)="sendResponse()">
           <mat-icon>send</mat-icon>
         </button>
     </div>  

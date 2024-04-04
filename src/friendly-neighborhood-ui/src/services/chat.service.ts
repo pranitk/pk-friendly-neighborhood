@@ -11,6 +11,7 @@ export class ChatService {
    nextQuestion$: ReplaySubject<QuestionFormat> = new ReplaySubject();
    currentAppState: string = 'initial';
    userId: number = 0;
+   isLoading$:ReplaySubject<boolean> = new ReplaySubject();
 
    httpOptions = {
     headers: new HttpHeaders({
@@ -77,6 +78,7 @@ export class ChatService {
         AppState: this.currentAppState,
         Message: response,
     };
+    this.isLoading$.next(true);
     this.httpClient.post('https://usecase4intentiondocker.azurewebsites.net/intention', reqObj, this.httpOptions).subscribe(
         {
             next: (res) => { 
@@ -88,10 +90,12 @@ export class ChatService {
                     sender: 'service',
                 });
                 this.currentAppState = response.appstate;
+                this.isLoading$.next(false);
             },
             error: (err) => { 
                 console.log('this is NOT working', err);
-                this.mockNextQuestion();                
+                this.mockNextQuestion();    
+                this.isLoading$.next(false);           
              },
            // complete: () => { console.log('this is working') },
         }

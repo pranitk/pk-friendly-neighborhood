@@ -1,20 +1,47 @@
-<div class="home-welcome-section">
-    <mat-card class="home-welcome-card">
-        <mat-card-content>
-            <h1>Hello, Welcome to Autism Connect</h1>
+<div class="frame">
+  <div class="header">
+    <mat-icon>person</mat-icon>
+    <span class="app-header-text">
+        Friendly Neighborhood
+    </span>
+  </div>
 
-            <!-- <form class="example-form">
-                <mat-form-field class="example-full-width">
-                  <mat-label>What are you looking for today?</mat-label>
-                  <input matInput placeholder="Ex. looking to connect with families" value="">
-                </mat-form-field>
-              </form> -->
-            <h3>What are you looking for?</h3>
-            <input type="text"
-                class="user-input">
+  <div class="chat-layout">
+    <div class="chat-panel">
+      @for (item of responses; track item.content; let i = $index) {
+          <div class="chat-row">
+              <p [ngClass]="{ 'user': item.sender === 'user',
+              'service': item.sender === 'service',
+              'current-question': item.sender === 'service' && (i === responses.length-1)  }">
+              {{item.content}}    
+          </p>
+          </div>
+      }
+    </div>
 
-        </mat-card-content>
-    </mat-card>
+    <!-- intro layout -->
+    <div *ngIf="responses.length === 0">
+      <p>{{helpTip}}</p>
+      <h1>{{question}}</h1>
+    </div> 
+  </div>
+
+  <div class="chat-user-input-panel">
+    <mat-progress-bar *ngIf="isLoadingResponse" 
+      mode="indeterminate"></mat-progress-bar>
+
+    <div class="user-input-panel">
+      <input 
+        class="user-input"
+        matInput 
+        [placeholder]="inputPlaceholder" 
+        [(ngModel)]="userInput">
+        <button mat-icon-button 
+                (click)="sendResponse()">
+          <mat-icon>send</mat-icon>
+        </button>
+    </div> 
+  </div>
 </div>
 
 

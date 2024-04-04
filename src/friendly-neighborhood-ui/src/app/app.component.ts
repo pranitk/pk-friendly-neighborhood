@@ -10,6 +10,7 @@ import { ChatService } from '../services/chat.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ChatResponse, QuestionFormat } from './interfaces';
 import { CommonModule } from '@angular/common';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 @Component({
   selector: 'app-root',
@@ -22,9 +23,10 @@ import { CommonModule } from '@angular/common';
     MatInputModule, 
     MatIconModule, 
     HttpClientModule,
+    MatProgressBarModule,
     MatButtonModule],
-  templateUrl: './app.component.html', // todo -> replace 
-  styleUrl: './app.component.scss'
+  templateUrl: './home.component.html', 
+  styleUrl: './home.component.scss'
 })
 export class AppComponent implements OnInit {
   title = 'friendly-neighborhood-ui';
@@ -33,14 +35,9 @@ export class AppComponent implements OnInit {
   userInput = '';
   inputPlaceholder = 'I am looking for...';
   responses: ChatResponse[] = [];
-//   @ViewChildren('messages') messages: QueryList<any> | undefined;
-// @ViewChild('content') content: ElementRef | undefined;
+  isLoadingResponse = false;
 
   constructor(private chatService: ChatService) {}
-
-  // ngAfterViewInit(): void {
-  //   this.messages?.changes.subscribe(this.scrollToBottom);
-  // }
 
   ngOnInit(): void {
     this.chatService.nextQuestion$.subscribe((ques: QuestionFormat) => { 
@@ -51,21 +48,21 @@ export class AppComponent implements OnInit {
     this.chatService.responses$.subscribe((response) => { 
       this.responses.push(response);
     });
+
+    this.chatService.isLoading$.subscribe((isloading) => {
+      this.isLoadingResponse = isloading;
+    })
   }
 
   sendResponse() {
-     this.chatService.sendResponseAndUpdateQuestion(this.userInput);
-    //this.chatService.sendUserResponse(this.userInput);
+    // this.chatService.sendResponseAndUpdateQuestion(this.userInput); // use this for mock
+    if(!this.userInput || this.userInput.trim().length === 0) {
+      return;
+    }
+
+    this.chatService.sendUserResponse(this.userInput);
     this.userInput = '';
     this.inputPlaceholder = 'Type your response here';
   }
 
-  // scrollToBottom = () => {
-  //   if(!this.content) {
-  //     return;
-  //   }
-  //   try {
-  //     this.content.nativeElement.scrollTop = this.content.nativeElement.scrollHeight;
-  //   } catch (err) {}
-  // }
 }
