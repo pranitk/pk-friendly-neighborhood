@@ -65,6 +65,7 @@ export class ChatService {
             type: 'text',
             sender: 'service',
         });
+        this.currentIndex++;
     }
 
     this.responses$.next({
